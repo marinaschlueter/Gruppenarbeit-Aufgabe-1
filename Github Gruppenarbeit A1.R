@@ -1,7 +1,8 @@
+# Dataframe alternativ zu Matrix erstellen -> leichterer Zugriff auf Spalten
 
-
-m <- matrix(0, byrow = TRUE, nrow = 100, ncol = 6)
-m
+m <- data.frame(numeric(100), numeric(100), numeric(100), numeric(100), numeric(100), numeric(100))
+names(m) <- c("ID", "Alter", "Studienfach", "Int. Mathe", "Int. Prog.", "Mathe-LK")
+View(m)
 
 colnames(m) <- c("ID", "Alter", "Studienfach", "Int. Mathe", "Int. Prog.", "Mathe-LK")
 m
@@ -38,10 +39,10 @@ m
 
 datensatz <- function(){
   
-  m <- matrix(0, byrow = TRUE, nrow = 100, ncol = 6)
+  m <- data.frame(numeric(100), numeric(100), numeric(100), numeric(100), numeric(100), numeric(100))
   
-  colnames(m) <- c("ID", "Alter", "Studienfach", "Int. Mathe", "Int. Prog.", "Mathe-LK")
-  
+  names(m) <- c("ID", "Alter", "Studienfach", "Int. Mathe", "Int. Prog.", "Mathe-LK")
+
   m[,1] <- 1:100
   
   m[,2] <- rnorm(100, 25 , 2)
@@ -69,13 +70,13 @@ datensatz <- function(){
 set.seed(123)
 datensatz()
 
-write.csv(m, "C:/Users/marin/OneDrive - Technische Universität Dortmund/Semester 3/Wissenschaftliches Arbeiten/Github/Datensatz.csv")
+# deinen Pfad loesche ich damit das unabhaenigig vom Computer gespeichert werden kann
+write.csv(m, "Datensatz.csv")
 
-be
 
 save()
 
-ID    Alter              Studienfach    Int. Mathe Int. Prog. Mathe-LK
+#      ID    Alter              Studienfach    Int. Mathe Int. Prog. Mathe-LK
 # [1,] "1"   "23.8790487068956" "Statistik"    "1"        "6"        "nein"  
 # [2,] "2"   "24.5396450210334" "Mathe"        "6"        "1"        "nein"  
 # [3,] "3"   "28.1174166282982" "Mathe"        "1"        "2"        "nein"  
