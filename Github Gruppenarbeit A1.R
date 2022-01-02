@@ -4,9 +4,6 @@ m <- data.frame(numeric(100), numeric(100), numeric(100), numeric(100), numeric(
 names(m) <- c("ID", "Alter", "Studienfach", "Int. Mathe", "Int. Prog.", "Mathe-LK")
 View(m)
 
-colnames(m) <- c("ID", "Alter", "Studienfach", "Int. Mathe", "Int. Prog.", "Mathe-LK")
-m
-
 m[,1] <- 1:100
 m
 
@@ -177,24 +174,3 @@ save()
 # [98,] "98"  "28.0652212523704" "Data Science" "4"        "3"        "nein"  
 # [99,] "99"  "24.528599281799"  "Statistik"    "6"        "6"        "ja"    
 # [100,] "100" "22.9471581993864" "Data Science" "3"        "7"        "ja"    
-# 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
